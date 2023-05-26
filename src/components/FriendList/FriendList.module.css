@@ -22,17 +22,19 @@
   width: 60px;
 }
 
-.isonline {
+.status {
   width: 10px;
   height: 10px;
   border-radius: 50%;
+}
+
+.isonline {
+  composes: status;
   background-color: green;
 }
 
 .isoffline {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+  composes: status;
   background-color: red;
 }
 

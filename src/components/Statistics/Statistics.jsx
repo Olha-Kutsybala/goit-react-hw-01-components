@@ -30,6 +30,16 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
+// Statistics.propTypes = {
+//   stats: PropTypes.array.isRequired,
+// };
 Statistics.propTypes = {
-  stats: PropTypes.array.isRequired,
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ).isRequired,
 };
